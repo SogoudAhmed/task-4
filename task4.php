@@ -43,13 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $gender = test_input($_POST["gender"]);
   }
-  // if (empty($_POST["File"])) {
-  //   $FileErr = "file is required";
-  // } else {
-  //   $File = test_input($_POST["File"]);
-  // }
-
-  // if($_SERVER['REQUEST_METHOD'] == "POST"){
 
   if(!empty($_FILES['File']['name'])){
 
@@ -117,7 +110,7 @@ function test_input($data) {
   <br>  <br>
 
   <div class="container">
-  < action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-da 
+   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
    <div class="form-group">
        <label for="exampleInputPassword1">file</label>
        <input type="file" name="File">
